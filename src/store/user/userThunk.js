@@ -1,0 +1,20 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
+
+const userTypeThunk = "users/by-id";
+
+const fetchUserById = () =>
+  new Promise((resolve) =>
+    setTimeout(() => resolve({ id: 1, name: "Max" }), 1000)
+  );
+
+export const getUserById = createAsyncThunk(
+  userTypeThunk,
+  async (userId, thunkApi) => {
+    try {
+      const response = await fetchUserById(userId);
+      return response;
+    } catch {
+      return thunkApi.rejectWithValue({});
+    }
+  }
+);

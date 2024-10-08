@@ -1,7 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { reducer } from "./slices/favourites";
+import { rootReducer } from "./rootReducer";
+import { api } from "./api/api";
+import { createLogger } from "redux-logger";
+
+const logger = createLogger({
+    collapsed: true,
+})
 
 export default configureStore({
-    reducer
+    reducer: rootReducer,
+    middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(api.middleware).concat(logger)
 })
 

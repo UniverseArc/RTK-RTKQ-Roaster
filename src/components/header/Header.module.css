@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px 5px;
+    /* position: relative; */
+}
+
+.header > span {
+    background-color: rgb(163, 60, 184);
+    color: white;
+    padding: 5px;
+    border-radius: 70%;
+    justify-content: center;
+    padding-top: 5px;
+    /* position: absolute;
+    top: 30px;
+    right: 500px; */
+}

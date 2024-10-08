@@ -1,0 +1,11 @@
+.receiptItem {
+    background-color: #686767;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 15px;
+    color: rgb(225, 225, 225);
+}
+
+.receiptItem h2{
+    margin: 5px 5px;
+}

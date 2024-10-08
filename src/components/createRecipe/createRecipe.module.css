@@ -1,0 +1,15 @@
+.main{
+    margin-left: 15px;
+}
+
+input {
+  margin: 5px 5px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  outline: none;
+  transition: border-color 0.4s ease-in-out;
+}
+
+input:focus {
+  border-color: rgb(96, 42, 73);
+}
