@@ -1,14 +1,19 @@
 import styles from './RecipeItem.module.css'
 import { useActions } from '../../hooks/useActions'
 import { useFavourites } from '../../hooks/useFavourites'
+import { IRecipe } from '../../types/recipeTypes'
 
-export const RecipeItem = ({ recipe }) => {
+interface IRecipeItem {
+  recipe: IRecipe
+}
+
+export const RecipeItem = ({ recipe }: IRecipeItem ) => {
   
   const state = useFavourites()
 
   const {toggleAddFavourite} = useActions()
 
-  const sendData = (recipe) => {
+  const sendData = (recipe: IRecipe) => {
     toggleAddFavourite(recipe)
   }
   const isExists = state.some(r => r.id === recipe.id)
